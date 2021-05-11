@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pricheck", "dll.vcproj", "{01E5C0FB-358A-4568-875E-A902DE365AEF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "prichecktest", "..\prichecktest\prichecktest.vcproj", "{FAC2DCC4-CC75-4821-AA54-3EDC436996DC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{01E5C0FB-358A-4568-875E-A902DE365AEF}.Debug.ActiveCfg = Debug|Win32
+		{01E5C0FB-358A-4568-875E-A902DE365AEF}.Debug.Build.0 = Debug|Win32
+		{01E5C0FB-358A-4568-875E-A902DE365AEF}.Release.ActiveCfg = Release|Win32
+		{01E5C0FB-358A-4568-875E-A902DE365AEF}.Release.Build.0 = Release|Win32
+		{FAC2DCC4-CC75-4821-AA54-3EDC436996DC}.Debug.ActiveCfg = Debug|Win32
+		{FAC2DCC4-CC75-4821-AA54-3EDC436996DC}.Debug.Build.0 = Debug|Win32
+		{FAC2DCC4-CC75-4821-AA54-3EDC436996DC}.Release.ActiveCfg = Release|Win32
+		{FAC2DCC4-CC75-4821-AA54-3EDC436996DC}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

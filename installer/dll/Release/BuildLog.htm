@@ -1,0 +1,40 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: pricheck, Configuration: Release|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\src\principal\install\dll\Release\RSP00002A.rsp" with contents
+[
+/O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "DLL_EXPORTS" /D "_WIN32_WINNT=0x0500" /D "_WIN32_DCOM" /D "_WINDLL" /D "_MBCS" /FD /EHsc /MT /GS /Fo"Release/" /Fd"Release/vc70.pdb" /W3 /c /Wp64 /Zi /TP
+.\interface.cpp
+]
+Creating command line "cl.exe @d:\src\principal\install\dll\Release\RSP00002A.rsp /nologo"
+Creating temporary file "d:\src\principal\install\dll\Release\RSP00002B.rsp" with contents
+[
+/OUT:"Release/pricheck.dll" /INCREMENTAL:NO /NOLOGO /DLL /DEF:"install.def" /DEBUG /PDB:"Release/pricheck.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /IMPLIB:"Release/dll.lib" /MACHINE:X86  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
+.\release\dllmain.obj
+.\release\interface.obj
+]
+Creating command line "link.exe @d:\src\principal\install\dll\Release\RSP00002B.rsp"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+interface.cpp
+interface.cpp(206) : warning C4244: '=' : conversion from 'DWORDLONG' to 'DWORD', possible loss of data
+Linking...
+   Creating library Release/dll.lib and object Release/dll.exp
+dll.exp : warning LNK4070: /OUT:dll.dll directive in .EXP differs from output filename 'Release/pricheck.dll'; ignoring directive
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\src\principal\install\dll\Release\BuildLog.htm"
+pricheck - 0 error(s), 2 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

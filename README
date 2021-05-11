@@ -1,0 +1,57 @@
+PRIAX VoIP Phone
+
+See configuration sample and address book sample, go to ./docs/examples
+
+Linux implementation read these files as ~/.priax and ~/.priax-book and
+MS Windows as PRIAX_DRIVE\PRIAX\priax.conf and priax-book.txt.
+PRIAX_DRIVE is an environment variable where default is C:.
+
+On the configuration file, you will find IAX settings like user, pass,
+host, caller ID, caller number, number of avaliable IAX lines to use
+and default language.
+The Address Book is very simple, you can edit it with your preferred text
+editor before running priax, because it is read only once - when you
+run priax.
+
+Keyboard and PRIAX's Keypad:
+Numbers from 0 to 9, # and * are valid keys on the keyboard and can also
+be found on the PRIAX's keypad. If you want to call someone, just type
+it's number and press the TALK button, or ENTER on the keyboard.
+When you're already talking, numbers from 0 to 9 and # and * will
+be sent as DTMF signals.
+To hangup, press the HANGUP button or ESC on the keyboard.
+
+Address Book:
+When you're on the main screen you can access the Address Book by 
+pressing the right arrow on the keyboard.
+On the Address Book, TALK/ENTER will call the entry selected and
+HANGUP/ESC will go back to the main screen.
+
+Calls dialled, Calls received and Missed calls:
+When you press TALK/ENTER with no numbers on the display, you go to the
+list of 'Calls dialled', where you can find all numbers you already
+dialled. Then, if you press the right arrow key on the keyboard you go 
+to the 'Calls Received' list, and right arrow again let you access the
+'Missed calls' list. To go back to the 'Calls Received' or 'Calls dialled'
+you press the left arrow on the keyboard. It looks like a cell phone.
+To go back to the main screen just press HANGUP/ESC.
+
+Transferring calls:
+When you're already talking with someone you can proceed as you do with
+a regular phone, by pressing FLASH on the PRIAX's keypad and then typing
+the number to call. When you HANGUP/ESC you transfer the call.
+
+Internationalization:
+PRIAX uses gettext so you can set environment variable LANG or change
+'language =' option on the configuration file.
+Linux path for .mo files is default:
+-> /usr/share/locale/pt_BR/LC_MESSAGES/priax.mo (example)
+Windows version of PRIAX will try to find .mo files under the PRIAX_BASE
+dir - defaults to C:\PRIAX:
+-> C:\PRIAX\locale\pt_BR\LC_MESSAGES\priax.mo (example)
+
+When new strings are added to the code, a new .po file must be created
+with the command: xgettext -C -o po/priax-pt_BR.po --keyword=_ *.c *.h
+
+    2005/10/24
+    Alexandre Fiori & Arnaldo M. Pereira

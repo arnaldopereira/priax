@@ -1,0 +1,40 @@
+#
+# $Id: Makefile.linux 560 2006-04-27 18:54:48Z arnaldo $
+#
+
+CC = cc
+RM = rm -f
+
+NAME = priax
+
+# iax stuff
+IAX_LIB_SRC = libs/iaxclient/lib
+IAX_LIB_TARGET = libs/iaxclient/lib/libiaxclient.a
+IAX_LIB = $(IAX_LIB_TARGET)
+#IAX_LIB = -lgsm -lspeex -lportaudio -liaxclient
+XPM_LIB = -L/usr/X11R6/lib -lXpm
+
+# cflags and libraries
+CFLAGS = `sdl-config --cflags` -Wall -O2 -Ilibs/iaxclient/lib
+LIBS   = `sdl-config --libs` -lSDL_ttf $(XPM_LIB) $(IAX_LIB)
+
+# objects
+OBJECTS = anim.o conf.o iax2.o path.o tray.o clock.o event.o fonts.o  \
+          priax.o colors.o global.o keypad.o myexit.o callreg.o       \
+          lcdmesg.o addrbook.o
+
+# build...
+.SUFFIXES: .c
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all: $(IAX_LIB_TARGET) $(OBJECTS) $(NAME)
+clean:
+	make clean -C $(IAX_LIB_SRC)
+	$(RM) $(NAME) $(OBJECTS)
+
+$(NAME):
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) $(LIBS)
+
+$(IAX_LIB_TARGET):
+	make -C $(IAX_LIB_SRC)

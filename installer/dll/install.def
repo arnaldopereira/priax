@@ -1,0 +1,5 @@
+LIBRARY	pricheck
+EXPORTS
+CheckCompatibleSoundBoard
+CheckCPUClock
+CheckRAM

@@ -1,0 +1,36 @@
+#
+# $Id: Makefile.windows 570 2006-05-04 17:50:36Z arnaldo $
+#
+
+CC = /usr/bin/i586-mingw32msvc-gcc -mwindows
+RM = rm -f
+
+NAME = priax.exe
+
+# default path for windows
+WIN_INC_DIR = -I/usr/local/win32/include -I/usr/local/win32/include/SDL
+WIN_LIB_DIR = -L/usr/local/win32/lib -L/usr/i586-mingw32msvc/lib
+
+# cflags and libraries
+CFLAGS = -DWIN32 -Wall $(WIN_INC_DIR)
+LIBS   = $(WIN_LIB_DIR) -lmingw32 -lSDLmain \
+	-lSDL -lSDL_ttf -lfreetype -liaxclient -lintl \
+	-lgcc -lwinmm -lwsock32 -lshell32
+
+# objects
+OBJECTS = tray.o anim.o conf.o iax2.o path.o clock.o event.o fonts.o \
+		priax.o colors.o global.o keypad.o myexit.o callreg.o \
+		lcdmesg.o addrbook.o
+
+# build...
+.SUFFIXES: .c
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all: $(OBJECTS) $(NAME)
+clean:
+	$(RM) $(NAME) $(OBJECTS)
+
+$(NAME):
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) $(LIBS)
+
